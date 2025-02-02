@@ -1,0 +1,90 @@
+.navContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.navList { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:25px;
+    position: relative;
+}
+
+.navItem {
+    list-style: none;
+    position: relative;
+    /* padding: 10px 15px; */
+    cursor: pointer;
+}
+
+.navLink {
+    font-size: var(--font-size-link);
+    text-decoration: none;
+    color: var(--blue-six);
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: background 0.3s;
+    user-select: none; /* Prevent text selection */
+    font-weight: 500;
+
+}
+
+/* .navItem.active .navLink {
+    background: rgba(238, 247, 254, 0.84);
+    border-radius: 20px;
+} */
+
+.separator {
+    margin-left: 5px;
+    color: var(--blue-six);
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+.circleIndicator {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    height: 40px; /* Fixed height */
+    border-radius: 20px; /* Rounded corners */
+    background: rgba(238, 247, 254, 0.84); /* Light blue background */
+    transition: left 0.3s ease-in-out, width 0.3s ease-in-out, top 0.3s ease-in-out; /* Add top transition */    
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+/* Media Query for screens <= 600px */
+@media (max-width: 600px) {
+    .navContainer {
+        position: fixed;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        padding-top: 0;
+        width: auto;
+        align-items: start;
+    }
+
+    .navList {
+        flex-direction: column; /* Stack items vertically */
+        gap: 20px;
+        align-items: flex-start;
+        padding-left: 2px;
+    }
+
+    .navItem {
+        padding: 10px 0;
+    }
+
+    .circleIndicator {
+        width: 90%; /* Adjust to fit the width of the nav items */
+        left: 50%; /* Center the indicator horizontally */
+        transform: translateX(-50%); /* Keep the indicator centered */
+    }
+}
