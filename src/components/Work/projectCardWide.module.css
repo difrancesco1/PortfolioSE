@@ -1,0 +1,46 @@
+.card {
+    height: 550px;
+    min-width: 800px;
+    border-radius: 64px;
+    background: hsla(284, 61%, 74%, 1);
+    color: hsla(171,  11%, 24%, 1);
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    width: 100%;
+    padding-top: 40px;
+    padding-right: 40px;
+}
+
+.title{
+    line-height: 130%;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-right: 40px;
+}
+
+.boldtitle {
+    padding-right: 40px;
+}
+
+.projectImage {
+    width: 100%; /* Ensures the image is responsive */
+    max-width: 590px; /* Limits the max width to keep it manageable */
+    border-radius: 15px;
+    border-bottom-right-radius: 65px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    position: absolute; /* Keeps it in the bottom-right corner */
+    bottom: 0;
+    right: 0;
+}

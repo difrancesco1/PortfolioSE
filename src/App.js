@@ -5,6 +5,7 @@ import Hero from './components/Hero.js';
 import content from './content.js';
 import rightImage from './assets/images/light-star.png';
 import rightImage2 from './assets/images/blue-star.png';
+import ProjectContainer from './components/Work/ProjectContainer.js';
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -24,6 +25,7 @@ function App() {
         }}
         activeIndex={activeIndex}  // Pass activeIndex to Hero
       />
+      <ProjectContainer activeIndex={activeIndex} />
     </div>
   );
 }
