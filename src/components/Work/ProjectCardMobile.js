@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from './projectCard.module.css';
+import styles from './projectCardMobile.module.css';
 import { motion } from 'framer-motion';
 import '../../App.css';
 

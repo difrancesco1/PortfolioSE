@@ -1,4 +1,3 @@
-// src/content.js
 const content = [
     {
         title: ["Hi, I'm Josh.", "A Software Engineer"],

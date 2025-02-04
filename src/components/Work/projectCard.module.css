@@ -1,6 +1,6 @@
 .card {
     height: 550px;
-    min-width: 600px;
+    width: 600px;
     border-radius: 64px;
     background: hsla(284, 61%, 74%, 1);
     color: hsla(171,  11%, 24%, 1);
@@ -36,6 +36,7 @@
 .projectImage {
     width: 100%; /* Ensures the image is responsive */
     max-width: 450px; /* Limits the max width to keep it manageable */
+    max-height: 375px;
     border-radius: 15px;
     border-bottom-right-radius: 65px;
     border-top-right-radius: 0;
