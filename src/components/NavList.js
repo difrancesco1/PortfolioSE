@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from 'react'
 import styles from './navList.module.css'
 import '../index.css'
 
-const NavList = React.memo(({ items }) => { // Taking Props from Nav (items = Nav titles)
-    const [activeIndex, setActiveIndex] = useState(0);  // Tracks which nav item is selected (default at Work on page load)
+const NavList = React.memo(({ items, activeIndex, setActiveIndex }) => { // Taking Props from Nav (items = Nav titles)
+    //const [activeIndex, setActiveIndex] = useState(0);  // Tracks which nav item is selected (default at Work on page load)
     const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0, top: 0 }); // Stores the left and top positions of the items along with their length (use for indicator)
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
 
@@ -21,7 +21,7 @@ const NavList = React.memo(({ items }) => { // Taking Props from Nav (items = Na
                     left: leftPosition,
                     width: offsetWidth,
                     top: offsetTop + offsetHeight / 2 - 30 + paddingTop,
-                    transition: 'none', // Remove transition for instant update
+                    transition: 'none', // Remove transition for instant update]
                 });
             } else {
                 // For desktop: updates left, width, and top for indicator

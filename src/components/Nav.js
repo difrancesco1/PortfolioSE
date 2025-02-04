@@ -4,11 +4,11 @@ import styles from './nav.module.css'
 import NavList from './NavList'
 
 
-const Nav = () => {
+const Nav = ({ activeIndex, setActiveIndex }) => {
     const items = useMemo(() => ['Work', 'About', 'Experience', 'Skills', 'Contact'], []);
     return (
         <nav className={styles.navContainer}>
-            <NavList items={items} />
+            <NavList items={items} activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
         </nav>
     )
 }

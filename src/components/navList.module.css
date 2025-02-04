@@ -5,6 +5,7 @@
     align-items: center;
     padding-top: 30px;
     transition: all 0.3s ease; /* Smooth transition */
+    z-index: 9;
 }
 
 .navList { 
@@ -69,6 +70,7 @@
         padding-top: 0;
         width: auto;
         align-items: start;
+        z-index: 3;
     }
 
     .navList {
