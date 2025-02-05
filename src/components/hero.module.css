@@ -97,14 +97,42 @@
 
   @media (max-width: 600px) {
     .heroContainer {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+  
+      display: flex;
+      text-align: center;
+      height: 25vh; /* Full screen height */
+  
+  
+  
+  
+  }
+    .heroContainer {
         justify-content: flex-start;
         padding-top: 40px;
     }
+
+    .title {
+      font-size: 9vw; /* Default responsive font size based on viewport width */
+      line-height: 1.1;
+    }
+    .paragraph {
+      font-size: 1rem;
+      max-width: 85%;
+      color: var(--blue-six);
+      font-weight: 400;
+  
+  }
+
     .rightImageOuter {
         width: 6vw; /* Use viewport width for responsiveness */
         position: absolute;
-        top: -1rem; /* Adjust the vertical positioning */
-        right: 4rem; /* Adjust the horizontal positioning */
+        top: -0.5rem;
+        right: 2rem; /* Adjust the horizontal positioning */
         max-width: 60px; /* Ensure images don't get too large */
         max-height: 60px; /* Keep images from getting too tall */
         padding-right: 40px;
@@ -114,29 +142,29 @@
       .rightImageInner {
         width: 6vw; /* Use viewport width for responsiveness */
         position: absolute;
-        top: -.7rem; /* Adjust the vertical positioning */
-        right: 4.3rem; /* Adjust the horizontal positioning */
+        top: -0.3rem;
+        right: 1.7rem; /* Adjust the horizontal positioning */
         max-width: 80px; /* Ensure images don't get too large */
         max-height: 80px; /* Keep images from getting too tall */
         padding-right: 40px;
       }
       
       .leftImageOuter {
-        width: 6vw; /* Use viewport width for responsiveness */
-        position: absolute;
-        top: -1rem; /* Adjust the vertical positioning */
-        left: 4rem; /* Adjust the horizontal positioning */
-        max-width: 60px; /* Ensure images don't get too large */
-        max-height: 60px; /* Keep images from getting too tall */
+        width: 6vw;
+        top: -0.5rem;
+        left: 1.7rem;
+        max-width: 60px;
+        max-height: 60px; 
         padding-right: 40px;
         z-index: 9;
       }
       .leftImageInner {
-        width: 6vw; /* Use viewport width for responsiveness */
+        width: 6vw; 
         position: absolute;
-        top: -.7rem; /* Adjust the vertical positioning */
-        left: 4.3rem; /* Adjust the horizontal positioning */
-        max-width: 60px; /* Ensure images don't get too large */
-        max-height: 60px; /* Keep images from getting too tall */
+        top: -0.3rem;
+        left: 1.4rem;
+        max-width: 60px;
+        max-height: 60px;
       }
+
 }
