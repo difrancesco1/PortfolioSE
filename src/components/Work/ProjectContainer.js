@@ -40,6 +40,7 @@ const ProjectContainer = ({ activeIndex }) => {
                     }}
                     title={items[0].header1}
                     tech={items[0].header2}
+                    bgColor="#D6A2F0"
                 />
                 <ProjectCardWide
                     images={{
@@ -48,7 +49,10 @@ const ProjectContainer = ({ activeIndex }) => {
                         kruggIconTwo: kruggIconTwo,
                     }}
                     title={items[1].header1}
-                    tech={items[1].header2} />
+                    tech={items[1].header2}
+                    bgColor="#596CAD"
+                />
+
             </motion.div>
             <motion.div
                 className={styles.projectContainer}
@@ -63,7 +67,9 @@ const ProjectContainer = ({ activeIndex }) => {
                         kruggIconTwo: kruggIconTwo,
                     }}
                     title={items[2].header1}
-                    tech={items[2].header2} />
+                    tech={items[2].header2}
+                    bgColor="#B6CFB6"
+                />
                 <ProjectCardMobile
                     images={{
                         decayTrackerImg: twitchImg,
@@ -71,6 +77,7 @@ const ProjectContainer = ({ activeIndex }) => {
                     }}
                     title={items[3].header1}
                     tech={items[3].header2}
+                    bgColor="#FFAEA5"
                 />
 
             </motion.div>

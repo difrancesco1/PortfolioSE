@@ -2,7 +2,6 @@
     height: 550px;
     width: 600px;
     border-radius: 64px;
-    background: hsla(284, 61%, 74%, 1);
     color: hsla(171,  11%, 24%, 1);
     display: flex;
     flex-direction: column;
@@ -50,4 +49,19 @@
     transform: translateX(-50%); /* Center horizontally */
     z-index: 5;
     opacity: 0; /* Start hidden */
+}
+
+@media (max-width: 1000px) {
+    .card {
+        height: 300px;
+        width: 90%;
+    }
+
+    .projectImage {
+
+            max-width: 330px; /* Limits the max width to keep it manageable */
+            max-height: 375px;
+            bottom: -180px;
+            right: 40%;
+    }
 }
