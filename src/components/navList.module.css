@@ -1,8 +1,10 @@
 .navContainer {
     position: relative;
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content: center;
     padding-top: 30px;
     transition: all 0.3s ease; /* Smooth transition */
     z-index: 9;
@@ -14,7 +16,7 @@
     justify-content: center;
     gap:25px;
     position: relative;
-    padding:0;
+    padding: 0;
 }
 
 .navItem {
@@ -63,20 +65,11 @@
 
 /* Media Query for screens <= 600px */
 @media (max-width: 600px) {
-    .navContainer {
-        position: fixed;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        padding-top: 0;
-        width: auto;
-        align-items: start;
-        z-index: 3;
-    }
+
 
     .navList {
-        flex-direction: column; /* Stack items vertically */
-        gap: 20px;
+        flex-direction: row; /* Stack items vertically */
+        gap: 3px;
         align-items: flex-start;
         padding-left: 2px;
     }

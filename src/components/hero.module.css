@@ -12,7 +12,6 @@
     font-size: 2rem;
     font-weight: bold;
 
-
     position: relative; /* Ensure the section is positioned properly */
     overflow: hidden; /* Prevent overflow if content gets too big */
 
@@ -29,6 +28,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    padding-top: 25px
 
 }
 
@@ -56,7 +56,7 @@
 .rightImageOuter {
     width: 10vw; /* Use viewport width for responsiveness */
     position: absolute;
-    top: -2rem; /* Adjust the vertical positioning */
+    top: 1rem; /* Adjust the vertical positioning */
     right: -1.5rem; /* Adjust the horizontal positioning */
     max-width: 80px; /* Ensure images don't get too large */
     max-height: 80px; /* Keep images from getting too tall */
@@ -67,7 +67,7 @@
   .rightImageInner {
     width: 10vw; /* Use viewport width for responsiveness */
     position: absolute;
-    top: -1.7rem; /* Adjust the vertical positioning */
+    top: 1.5rem; /* Adjust the vertical positioning */
     right: -1.1rem; /* Adjust the horizontal positioning */
     max-width: 80px; /* Ensure images don't get too large */
     max-height: 80px; /* Keep images from getting too tall */
@@ -77,7 +77,7 @@
   .leftImageOuter {
     width: 10vw; /* Use viewport width for responsiveness */
     position: absolute;
-    top: -1.7rem; /* Adjust the vertical positioning */
+    top: 1rem; /* Adjust the vertical positioning */
     left: -1.5rem; /* Adjust the horizontal positioning */
     max-width: 80px; /* Ensure images don't get too large */
     max-height: 80px; /* Keep images from getting too tall */
@@ -87,7 +87,7 @@
   .leftImageInner {
     width: 10vw; /* Use viewport width for responsiveness */
     position: absolute;
-    top: -1.5rem; /* Adjust the vertical positioning */
+    top: 1.5rem; /* Adjust the vertical positioning */
     left: -1.1rem; /* Adjust the horizontal positioning */
     max-width: 80px; /* Ensure images don't get too large */
     max-height: 80px; /* Keep images from getting too tall */
@@ -102,18 +102,14 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
-  
+      
       display: flex;
       text-align: center;
-      height: 25vh; /* Full screen height */
-  
-  
-  
-  
+      height: 25vh; 
   }
     .heroContainer {
         justify-content: flex-start;
-        padding-top: 40px;
+        padding-top: 60px;
     }
 
     .title {
@@ -131,7 +127,7 @@
     .rightImageOuter {
         width: 6vw; /* Use viewport width for responsiveness */
         position: absolute;
-        top: -0.5rem;
+        top: 3.3rem;
         right: 2rem; /* Adjust the horizontal positioning */
         max-width: 60px; /* Ensure images don't get too large */
         max-height: 60px; /* Keep images from getting too tall */
@@ -142,7 +138,7 @@
       .rightImageInner {
         width: 6vw; /* Use viewport width for responsiveness */
         position: absolute;
-        top: -0.3rem;
+        top: 3rem;
         right: 1.7rem; /* Adjust the horizontal positioning */
         max-width: 80px; /* Ensure images don't get too large */
         max-height: 80px; /* Keep images from getting too tall */
@@ -151,7 +147,7 @@
       
       .leftImageOuter {
         width: 6vw;
-        top: -0.5rem;
+        top: 3.3rem;
         left: 1.7rem;
         max-width: 60px;
         max-height: 60px; 
@@ -161,7 +157,7 @@
       .leftImageInner {
         width: 6vw; 
         position: absolute;
-        top: -0.3rem;
+        top: 3rem;
         left: 1.4rem;
         max-width: 60px;
         max-height: 60px;
