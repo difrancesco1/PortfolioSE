@@ -52,7 +52,6 @@ const ProjectContainer = ({ activeIndex }) => {
             </motion.div>
             <motion.div
                 className={styles.projectContainer}
-                key={activeIndex} // Forces re-render when activeIndex changes
                 initial={{ opacity: 0, y: 30 }} // Start slightly below
                 animate={{ opacity: triggerAnimation ? 1 : 0, y: triggerAnimation ? 0 : 30 }} // Animate in
                 transition={{ duration: 0.6, delay: 0.3 }}

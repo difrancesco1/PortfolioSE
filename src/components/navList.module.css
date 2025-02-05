@@ -14,6 +14,7 @@
     justify-content: center;
     gap:25px;
     position: relative;
+    padding:0;
 }
 
 .navItem {
