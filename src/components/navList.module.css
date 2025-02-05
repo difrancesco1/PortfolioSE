@@ -1,28 +1,43 @@
 .navContainer {
-    position: relative;
     position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
     padding-top: 30px;
-    transition: all 0.3s ease; /* Smooth transition */
+    transition: all 0.3s ease;
     z-index: 9;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99900;
+
 }
 
-.navList { 
+.navList {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:25px;
+    gap: 25px;
     position: relative;
-    padding: 0;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
 }
 
+/* Background only wraps around NavList when scrolling */
+.scrolled {
+    background: rgba(152, 208, 252, 0.54); /* Light blue background */
+    backdrop-filter: blur(10px); /* Slight blur effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+
+}
+
+/* Nav Item Styles */
 .navItem {
     list-style: none;
     position: relative;
-    /* padding: 10px 15px; */
     cursor: pointer;
 }
 
@@ -33,15 +48,9 @@
     padding: 5px 15px;
     border-radius: 20px;
     transition: background 0.3s;
-    user-select: none; /* Prevent text selection */
+    user-select: none;
     font-weight: 500;
-
 }
-
-/* .navItem.active .navLink {
-    background: rgba(238, 247, 254, 0.84);
-    border-radius: 20px;
-} */
 
 .separator {
     margin-left: 5px;
@@ -50,28 +59,28 @@
     transition: opacity 0.3s ease;
 }
 
+/* Indicator */
 .circleIndicator {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%); /* Center vertically */
-    height: 40px; /* Fixed height */
-    border-radius: 20px; /* Rounded corners */
-    background: rgba(238, 247, 254, 0.84); /* Light blue background */
-    transition: left 0.3s ease-in-out, width 0.3s ease-in-out, top 0.3s ease-in-out; /* Add top transition */    
+    transform: translateY(-50%);
+    height: 40px;
+    border-radius: 20px;
+    background: rgba(238, 247, 254, 0.74);
+    transition: left 0.3s ease-in-out, width 0.3s ease-in-out, top 0.3s ease-in-out;
     z-index: -1;
     pointer-events: none;
 }
 
-
-/* Media Query for screens <= 600px */
+/* Mobile Styles */
 @media (max-width: 600px) {
-
-
     .navList {
-        flex-direction: row; /* Stack items vertically */
+        flex-direction: row;
         gap: 3px;
         align-items: flex-start;
-        padding-left: 2px;
+        padding-left: 15px;
+        padding-right: 15px;
+        z-index: 99900;
     }
 
     .navItem {
@@ -79,8 +88,8 @@
     }
 
     .circleIndicator {
-        width: 90%; /* Adjust to fit the width of the nav items */
-        left: 50%; /* Center the indicator horizontally */
-        transform: translateX(-50%); /* Keep the indicator centered */
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

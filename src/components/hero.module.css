@@ -1,22 +1,40 @@
 .heroContainer {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 80vh;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(0deg, rgba(198,226,239,1) 0%, rgba(173,198,233,1) 85%);
+}
 
-    display: flex;
-    text-align: center;
-    height: 80vh; /* Full screen height */
-    color: white; /* Adjust based on your design */
-    font-size: 2rem;
-    font-weight: bold;
-
-    position: relative; /* Ensure the section is positioned properly */
-    overflow: hidden; /* Prevent overflow if content gets too big */
-
-    background: linear-gradient(0deg, rgba(198,226,239,1) 0%, rgba(173,198,233,1) 85%);
-
+/* Grid overlay effect */
+.heroContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+  repeating-linear-gradient(
+      0deg, rgba(134, 134, 134, 0.1) 0px, 
+      rgba(124, 124, 124, 0.1) 1px, 
+      transparent 1px, transparent 20px
+  ),
+  repeating-linear-gradient(
+      90deg, rgba(131, 131, 131, 0.1) 0px, 
+      rgba(134, 134, 134, 0.1) 1px, 
+      transparent 1px, transparent 20px
+  );
+  opacity: 1;
+  pointer-events: none; /* Ensure it doesn’t interfere with interactions */
 }
 
 
@@ -98,18 +116,10 @@
   @media (max-width: 600px) {
     .heroContainer {
       width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      
-      display: flex;
-      text-align: center;
       height: 25vh; 
-  }
-    .heroContainer {
-        justify-content: flex-start;
-        padding-top: 60px;
+      justify-content: flex-start;
+      padding-top: 90px;
+      padding-bottom: 90px;
     }
 
     .title {
