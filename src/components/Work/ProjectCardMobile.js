@@ -4,12 +4,12 @@ import { motion } from 'framer-motion';
 import '../../App.css';
 
 
-const ProjectCard = ({ images, title, tech }) => {
+const ProjectCard = ({ images, title, tech, bgColor }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
         <motion.div
-            className={styles.card}
+            className={styles.card} style={{ background: bgColor }}
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
             whileHover={{
