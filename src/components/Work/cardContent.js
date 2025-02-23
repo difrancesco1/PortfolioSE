@@ -2,7 +2,6 @@ const content = [
     {
         header1: "Decay Tracker",
         header2: "React",
-
     },
     {
         header1: "Krugg",
