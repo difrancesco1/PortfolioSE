@@ -16,7 +16,8 @@ const ProjectCard = ({ images, title, tech, bgColor, projectId }) => {
 
     return (
         <motion.div
-            className={styles.card} style={{ background: bgColor }}
+            className={styles.card}
+            style={{ background: bgColor }}
             onClick={handleClick}
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}

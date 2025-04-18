@@ -1,0 +1,247 @@
+.projectDetail {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--blue-one);
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  /* Card container */
+  .projectContainer {
+    width: 80%;
+    margin: 40px auto;
+    background-color: rgba(255, 224, 254, 0.6);
+    opacity: 0.9;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-width: 1200px;
+    margin-top: 140px;
+  }
+  
+  /* Header Section */
+  .header {
+    padding: 120px 40px 60px;
+    color: var(--blue-six);
+    position: relative;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+  
+  .backButton {
+    position: absolute;
+    top: 38px;
+    left: 40px;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .backButton:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: translateX(-5px);
+  }
+  
+  .title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .tech {
+    font-size: 1.5rem;
+    font-weight: 500;
+    opacity: 0.8;
+  }
+  
+  /* Content Section */
+  .content {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .description {
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+  
+  .description h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--blue-six);
+  }
+  
+  .description p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: var(--blue-six);
+  }
+  
+  .projectImages {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  
+  .mainImage {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .features {
+    margin-bottom: 40px;
+  }
+  
+  .features h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--blue-six);
+  }
+  
+  .features ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .features li {
+    padding: 10px 0;
+    font-size: 1.1rem;
+    color: var(--blue-six);
+    position: relative;
+    padding-left: 30px;
+  }
+  
+  .features li:before {
+    content: "•";
+    color: var(--blue-three);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: 5px;
+  }
+  
+  .techStack {
+    margin-bottom: 40px;
+  }
+  
+  .techStack h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--blue-six);
+  }
+  
+  .techTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .techTag {
+    background-color: var(--blue-two);
+    color: var(--blue-six);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  .links {
+    margin-bottom: 60px;
+  }
+  
+  .links h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--blue-six);
+  }
+  
+  .buttonContainer {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .button {
+    padding: 12px 24px;
+    background-color: var(--blue-three);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: var(--blue-six);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .notFound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    color: var(--blue-six);
+  }
+  
+  .notFound h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .notFound button {
+    padding: 10px 20px;
+    background-color: var(--blue-three);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .projectContainer {
+      width: 95%;
+    }
+  
+    .header {
+      padding: 100px 20px 40px;
+    }
+    
+    .backButton {
+      top: 80px;
+      left: 20px;
+    }
+    
+    .title {
+      font-size: 2rem;
+    }
+    
+    .content {
+      padding: 20px;
+    }
+    
+    .buttonContainer {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .button {
+      width: 100%;
+      text-align: center;
+    }
+  }

@@ -1,14 +1,23 @@
 import React, { useState } from 'react';
-import styles from './projectCardWide.module.css'
+import { useNavigate } from 'react-router-dom';
+import styles from './projectCardWide.module.css';
 import { motion } from 'framer-motion';
 import '../../App.css';
 
-const ProjectCardWide = ({ images, title, tech, bgColor }) => {
+const ProjectCardWide = ({ images, title, tech, bgColor, projectId }) => {
     const [isHovered, setIsHovered] = useState(false);
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        if (!projectId) return;
+        navigate(`/project/${projectId}`);
+    };
 
     return (
         <motion.div
-            className={styles.card} style={{ background: bgColor }}
+            className={styles.card}
+            style={{ background: bgColor }}
+            onClick={handleClick}
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
             whileHover={{
@@ -30,6 +39,7 @@ const ProjectCardWide = ({ images, title, tech, bgColor }) => {
                     y: isHovered ? 15 : 0, // Move down when hovered
                 }}
                 transition={{ duration: 0.3 }}
+                alt={title}
             />
 
             <motion.img
@@ -41,6 +51,7 @@ const ProjectCardWide = ({ images, title, tech, bgColor }) => {
                     opacity: isHovered ? 1 : 0,
                 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
+                alt={`${title} icon`}
             />
         </motion.div>
     );
