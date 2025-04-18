@@ -1,15 +1,23 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './projectCard.module.css';
 import { motion } from 'framer-motion';
 import '../../App.css';
 
 
-const ProjectCard = ({ images, title, tech, bgColor }) => {
+const ProjectCard = ({ images, title, tech, bgColor, projectId }) => {
     const [isHovered, setIsHovered] = useState(false);
+
+    const navigate = useNavigate();
+    const handleClick = () => {
+        if (!projectId) return;
+        navigate(`/project/${projectId}`);
+    };
 
     return (
         <motion.div
             className={styles.card} style={{ background: bgColor }}
+            onClick={handleClick}
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
             whileHover={{
@@ -36,7 +44,7 @@ const ProjectCard = ({ images, title, tech, bgColor }) => {
             {/* Hover Reveal Image outside the card */}
             <motion.img
                 src={images.decayTrackerIconImg}
-                className={styles.extraImage} // FIX: Make sure it matches the CSS class
+                className={styles.extraImage}
                 initial={{ y: 50, opacity: 0 }} // Start hidden slightly below
                 animate={{
                     y: isHovered ? 0 : 30, // Move up and fade in

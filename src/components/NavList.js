@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './navList.module.css';
 import '../index.css';
 
@@ -6,13 +7,12 @@ const NavList = React.memo(({ items, activeIndex, setActiveIndex }) => {
     const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0, top: 0 });
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
     const [scrolled, setScrolled] = useState(false); // Track scroll state
-
     const navRefs = useRef([]); // Ref array for nav items
+    const navigate = useNavigate();
 
     const updateIndicator = () => {
         if (navRefs.current[activeIndex]) {
             const { offsetLeft, offsetWidth, offsetTop, offsetHeight } = navRefs.current[activeIndex];
-
             const paddingTop = window.innerWidth <= 600 ? 10 : 30;
 
             if (window.innerWidth <= 600) {
@@ -76,11 +76,14 @@ const NavList = React.memo(({ items, activeIndex, setActiveIndex }) => {
                         key={index}
                         ref={(el) => (navRefs.current[index] = el)}
                         className={`${styles.navItem} ${activeIndex === index ? styles.active : ''}`}
-                        onClick={() => setActiveIndex(index)}
+                        onClick={(e) => {
+                            e.preventDefault();
+                            setActiveIndex(index);
+                            navigate(`/#${item.toLowerCase()}`); // Use navigate instead of pushState
+                        }}
                     >
                         <a href={`#${item.toLowerCase()}`} className={styles.navLink}>
                             {item}
-                            {activeIndex === index && <span className={styles.separator}>/</span>}
                         </a>
                     </li>
                 ))}

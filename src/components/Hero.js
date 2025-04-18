@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './hero.module.css';
 import { motion } from 'framer-motion'; // Ensure we're using the motion library
 
-const Hero = ({ title, paragraph, images }) => {
+const Hero = ({ title, paragraph, images, activeIndex }) => {
     const [triggerAnimation, setTriggerAnimation] = useState(false);
 
     // Trigger animation on first mount
@@ -16,7 +16,7 @@ const Hero = ({ title, paragraph, images }) => {
         setTimeout(() => setTriggerAnimation(true), 100); // Delay to trigger animation again
     }, [title]); // Dependency on title to re-trigger when title changes
 
-    const isWorkSection = title[0] === "Hi, I'm Josh."; // Adjust this condition to match your title
+    const isWorkSection = activeIndex === 0; // Adjust this condition to match your title
 
     return (
         <>
@@ -39,9 +39,12 @@ const Hero = ({ title, paragraph, images }) => {
                             {title[0]} <br /> {title[1]}
                         </motion.h1>
 
-                        <motion.p className={styles.paragraph}>
-                            {paragraph}
-                        </motion.p>
+                        {activeIndex !== 1 && (
+                            <motion.p className={styles.paragraph}>
+                                {paragraph}
+                            </motion.p>
+                        )}
+
                     </motion.div>
 
                     {/* Images fade-in and shift-in */}

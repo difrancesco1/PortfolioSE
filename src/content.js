@@ -1,12 +1,12 @@
 const content = [
     {
         title: ["Hi, I'm Josh.", "A Software Engineer"],
-        paragraph: "Full-stack software engineer constantly looking to improve and learn new technologies on the way.",
+        paragraph: "Full-stack engineer constantly looking to improve and learn new technologies on the way.",
 
     },
     {
-        title: ['About'],
-        paragraph: 'This section contains information about the person, their background, etc.',
+        title: ["About me."],
+        paragraph: 'For the past 3 years I have garnered experience as a Front-end and Back-end Engineer creating applications in the fintech industry. My favorite part of being a Full stack Developer is the creating software from the ground up and having a sense of ownership for a product.',
     },
     {
         title: 'Experience',
